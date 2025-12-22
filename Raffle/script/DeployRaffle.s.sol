@@ -8,8 +8,8 @@ import {HelperConfig} from "../script/HelperConfig.s.sol";
 contract DeployRaffle is Script {
     function run() public {}
 
-    function deployContract() public return(Raffle, HelperConfig) {
-        HelperConfig config = new HelperConfig();
+    function deployContract() public returns(Raffle, HelperConfig) {
+        HelperConfig helperConfig = new HelperConfig();
         // local -> deploy mocks, get local config
         // sepolia -> get sepolia config
         HelperConfig.NetworkConfig memory config = helperConfig.getConfig();
@@ -17,13 +17,13 @@ contract DeployRaffle is Script {
 
         vm.startBroadcast();
         Raffle raffle = new Raffle(
-            config.enteranceFee,
+            config.entranceFee,
             config.interval,
             config.vrfCoordinator,
             config.gasLane,
             config.subscriptionId,
             config.callbackGasLimit
-        )
+        );
         vm.stopBroadcast();
 
         return (raffle, helperConfig);
