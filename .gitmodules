@@ -1,3 +1,6 @@
 [submodule "Raffle/lib/chainlink-brownie-contracts"]
 	path = Raffle/lib/chainlink-brownie-contracts
 	url = https://github.com/smartcontractkit/chainlink-brownie-contracts
+[submodule "Raffle/lib/solmate"]
+	path = Raffle/lib/solmate
+	url = https://github.com/transmissions11/solmate
