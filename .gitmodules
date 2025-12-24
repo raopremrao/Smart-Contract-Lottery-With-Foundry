@@ -6,4 +6,4 @@
 	url = https://github.com/transmissions11/solmate
 [submodule "Raffle/lib/foundry-devops"]
 	path = Raffle/lib/foundry-devops
-	url = https://github.com/Cyfrin/foundry-devops
+	url = https://github.com/cyfrin/foundry-devops
